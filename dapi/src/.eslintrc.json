@@ -1,0 +1,13 @@
+{
+  "env": {
+    "commonjs": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 5,
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "src"
+  },
+  "extends": [
+    "@umbrik/eslint-config-hcm-wt"
+  ]
+}
