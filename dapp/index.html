@@ -1,0 +1,31 @@
+<style>
+  /* specify content container inside html structure */
+  html.dapp-async-hide #content {
+    opacity: 0;
+  }
+
+  /* specify transition for content container */
+  #content {
+    transition: opacity 0.1s linear;
+  }
+</style>
+
+<script>
+  (function (a, s, y, n, c, h, i, d, e) {
+    s.className += ' ' + y;
+    h.start = 1 * new Date();
+    h.end = i = function () {
+      s.className = s.className.replace(RegExp(' ?' + y), '');
+    };
+    (a[n] = a[n] || []).hide = h;
+    setTimeout(function () {
+      i();
+      h.end = null;
+    }, c);
+  })(window, document.documentElement, 'dapp-async-hide', 'dataLayer', 1500, {
+    'GTM-XXXXXX': true,
+  });
+</script>
+
+<script type="module" src="src/main.ts"></script>
+<div id="dapp-mount-root" style="display: none"></div>
